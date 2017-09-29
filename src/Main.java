@@ -71,7 +71,9 @@ public class Main
 	{
 		if( DEBUG )
 		{
-			System.out.println( "Attempting to write to " + outFileName + " in " + System.getProperty( "user.dir" ) );
+			System.out.println( "Attempting to write " + inventoryList.size() + " parts to " + outFileName + " in " + System.getProperty( "user.dir" ) );
+			System.out.println( "The first part is Code: " + inventoryList.get( 0 ).getItemCode() );
+			System.out.println( "The last part is Code: " + inventoryList.get( inventoryList.size() - 1 ).getItemCode() );
 		}
 		try
 		{
