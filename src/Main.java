@@ -11,6 +11,11 @@ public class Main
 	private static final boolean DEBUG = true;
 
 
+	/**
+	 * main will attempt to convert a very specific inventory XML file to its CSV (tab delimited) equivalent.
+	 * It is tab delimited so I don't have to deal with commas in the part descriptions.
+	 * @param args the input file name and the output file name.
+	 */
 	public static void main( String[] args )
 	{
 		System.out.println( "XML to CSV" );
@@ -25,11 +30,12 @@ public class Main
 		try
 		{
 			Document document = saxBuilder.build( inputFile );
-			System.out.println( "Root element :" + document.getRootElement().getName() );
+//			System.out.println( "Root element: " + document.getRootElement().getName() );
 			Element classElement = document.getRootElement();
 			List< Element > stockList = classElement.getChildren( "InventoryOnHandStocks" );
+			// ToDo: move the XML reading code to a different method, so I can RAII this next line.
 			List< InventoryObject > inventoryList = new ArrayList<>();
-			System.out.println( "----------------------------" );
+
 			for( Element inventoryItem : stockList )
 			{
 				InventoryObject tempInventoryObject = new InventoryObject();
@@ -53,10 +59,10 @@ public class Main
 				tempInventoryObject.setActive( inventoryItem.getChild( "Active" ).getText() );
 				inventoryList.add( tempInventoryObject );
 			}
-			for( InventoryObject part : inventoryList )
-			{
-				System.out.println( part.getItemCode() + " " + part.getDescription() );
-			}
+//			for( InventoryObject part : inventoryList )
+//			{
+//				System.out.println( part.getItemCode() + " " + part.getDescription() );
+//			}
 			System.out.println( "\n" + inventoryList.size() + " parts imported." );
 			ListToCSV( inventoryList, args[1] );
 		}
@@ -67,6 +73,11 @@ public class Main
 	} // End of main() method.
 
 
+	/**
+	 * ListToCSV takes an ArrayList of InventoryObjects and attempts to write that data to a file in the current directory.
+	 * @param inventoryList an ArrayList of InventoryObjects
+	 * @param outFileName the file name to attempt to write.
+	 */
 	private static void ListToCSV( List< InventoryObject > inventoryList, String outFileName )
 	{
 		if( DEBUG )
