@@ -37,48 +37,11 @@ public class Main
 				tempInventoryObject.setWarehouseName( inventoryItem.getChild( "WarehouseName" ).getText() );
 				tempInventoryObject.setItemCode( inventoryItem.getChild( "ItemCode" ).getText() );
 				tempInventoryObject.setDescription( inventoryItem.getChild( "Description" ).getText() );
-				if( inventoryItem.getChild( "InventoryClass" ).getText().length() == 0 )
-				{
-//					tempInventoryObject.setInventoryClass( "\t" );
-				}
-				else
-				{
-					tempInventoryObject.setInventoryClass( inventoryItem.getChild( "InventoryClass" ).getText() );
-				}
-				if( inventoryItem.getChild( "ProductGroup" ).getText().length() == 0 )
-				{
-//					tempInventoryObject.setProductGroup( "\t" );
-				}
-				else
-				{
-					tempInventoryObject.setProductGroup( inventoryItem.getChild( "ProductGroup" ).getText() );
-				}
-				if( inventoryItem.getChild( "PreferredSupplier" ).getText().length() == 0 )
-				{
-//					tempInventoryObject.setPreferredSupplier( "\t" );
-				}
-				else
-				{
-					tempInventoryObject.setPreferredSupplier( inventoryItem.getChild( "PreferredSupplier" ).getText() );
-				}
-				if( inventoryItem.getChild( "MaxOnHand" ).getText().length() == 0 )
-				{
-//					tempInventoryObject.setMaxOnHand( "\t" );
-				}
-				else
-				{
-					tempInventoryObject.setMaxOnHand( inventoryItem.getChild( "MaxOnHand" ).getText() );
-				}
-				if( inventoryItem.getChild( "MinOnHand" ).getText().length() == 0 )
-				{
-//					tempInventoryObject.setMinOnHand( "\t" );
-				}
-				else
-				{
-					tempInventoryObject.setMinOnHand( inventoryItem.getChild( "MinOnHand" ).getText() );
-				}
-
-
+				tempInventoryObject.setInventoryClass( inventoryItem.getChild( "InventoryClass" ).getText() );
+				tempInventoryObject.setProductGroup( inventoryItem.getChild( "ProductGroup" ).getText() );
+				tempInventoryObject.setPreferredSupplier( inventoryItem.getChild( "PreferredSupplier" ).getText() );
+				tempInventoryObject.setMaxOnHand( inventoryItem.getChild( "MaxOnHand" ).getText() );
+				tempInventoryObject.setMinOnHand( inventoryItem.getChild( "MinOnHand" ).getText() );
 				tempInventoryObject.setLastPurchaseCostUnit( inventoryItem.getChild( "LastPurchaseCostUnit" ).getText() );
 				tempInventoryObject.setLastPurchaseCostTotal( inventoryItem.getChild( "LastPurchaseCostTotal" ).getText() );
 				tempInventoryObject.setAverageCostUnit( inventoryItem.getChild( "AverageCostUnit" ).getText() );
