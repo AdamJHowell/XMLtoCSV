@@ -1,4 +1,4 @@
-public class InventoryObject
+class InventoryObject
 {
 	private String WarehouseCode;
 	private String WarehouseName;
@@ -20,217 +20,217 @@ public class InventoryObject
 	private String Active;
 
 
-	public String getWarehouseCode()
+	String getWarehouseCode()
 	{
 		return WarehouseCode;
 	}
 
 
-	public void setWarehouseCode( String warehouseCode )
+	void setWarehouseCode( String warehouseCode )
 	{
 		WarehouseCode = warehouseCode;
 	}
 
 
-	public String getWarehouseName()
+	String getWarehouseName()
 	{
 		return WarehouseName;
 	}
 
 
-	public void setWarehouseName( String warehouseName )
+	void setWarehouseName( String warehouseName )
 	{
 		WarehouseName = warehouseName;
 	}
 
 
-	public String getItemCode()
+	String getItemCode()
 	{
 		return ItemCode;
 	}
 
 
-	public void setItemCode( String itemCode )
+	void setItemCode( String itemCode )
 	{
 		ItemCode = itemCode;
 	}
 
 
-	public String getDescription()
+	String getDescription()
 	{
 		return Description;
 	}
 
 
-	public void setDescription( String description )
+	void setDescription( String description )
 	{
 		Description = description;
 	}
 
 
-	public String getInventoryClass()
+	String getInventoryClass()
 	{
 		return InventoryClass;
 	}
 
 
-	public void setInventoryClass( String inventoryClass )
+	void setInventoryClass( String inventoryClass )
 	{
 		InventoryClass = inventoryClass;
 	}
 
 
-	public String getProductGroup()
+	String getProductGroup()
 	{
 		return ProductGroup;
 	}
 
 
-	public void setProductGroup( String productGroup )
+	void setProductGroup( String productGroup )
 	{
 		ProductGroup = productGroup;
 	}
 
 
-	public String getPreferredSupplier()
+	String getPreferredSupplier()
 	{
 		return PreferredSupplier;
 	}
 
 
-	public void setPreferredSupplier( String preferredSupplier )
+	void setPreferredSupplier( String preferredSupplier )
 	{
 		PreferredSupplier = preferredSupplier;
 	}
 
 
-	public String getMaxOnHand()
+	String getMaxOnHand()
 	{
 		return MaxOnHand;
 	}
 
 
-	public void setMaxOnHand( String maxOnHand )
+	void setMaxOnHand( String maxOnHand )
 	{
 		MaxOnHand = maxOnHand;
 	}
 
 
-	public String getMinOnHand()
+	String getMinOnHand()
 	{
 		return MinOnHand;
 	}
 
 
-	public void setMinOnHand( String minOnHand )
+	void setMinOnHand( String minOnHand )
 	{
 		MinOnHand = minOnHand;
 	}
 
 
-	public String getLastPurchaseCostUnit()
+	String getLastPurchaseCostUnit()
 	{
 		return LastPurchaseCostUnit;
 	}
 
 
-	public void setLastPurchaseCostUnit( String lastPurchaseCostUnit )
+	void setLastPurchaseCostUnit( String lastPurchaseCostUnit )
 	{
 		LastPurchaseCostUnit = lastPurchaseCostUnit;
 	}
 
 
-	public String getLastPurchaseCostTotal()
+	String getLastPurchaseCostTotal()
 	{
 		return LastPurchaseCostTotal;
 	}
 
 
-	public void setLastPurchaseCostTotal( String lastPurchaseCostTotal )
+	void setLastPurchaseCostTotal( String lastPurchaseCostTotal )
 	{
 		LastPurchaseCostTotal = lastPurchaseCostTotal;
 	}
 
 
-	public String getAverageCostUnit()
+	String getAverageCostUnit()
 	{
 		return AverageCostUnit;
 	}
 
 
-	public void setAverageCostUnit( String averageCostUnit )
+	void setAverageCostUnit( String averageCostUnit )
 	{
 		AverageCostUnit = averageCostUnit;
 	}
 
 
-	public String getAverageCostTotal()
+	String getAverageCostTotal()
 	{
 		return AverageCostTotal;
 	}
 
 
-	public void setAverageCostTotal( String averageCostTotal )
+	void setAverageCostTotal( String averageCostTotal )
 	{
 		AverageCostTotal = averageCostTotal;
 	}
 
 
-	public String getStandardCostUnit()
+	String getStandardCostUnit()
 	{
 		return StandardCostUnit;
 	}
 
 
-	public void setStandardCostUnit( String standardCostUnit )
+	void setStandardCostUnit( String standardCostUnit )
 	{
 		StandardCostUnit = standardCostUnit;
 	}
 
 
-	public String getStandardCostTotal()
+	String getStandardCostTotal()
 	{
 		return StandardCostTotal;
 	}
 
 
-	public void setStandardCostTotal( String standardCostTotal )
+	void setStandardCostTotal( String standardCostTotal )
 	{
 		StandardCostTotal = standardCostTotal;
 	}
 
 
-	public String getCurrency()
+	String getCurrency()
 	{
 		return Currency;
 	}
 
 
-	public void setCurrency( String currency )
+	void setCurrency( String currency )
 	{
 		Currency = currency;
 	}
 
 
-	public String getConsignmentItem()
+	String getConsignmentItem()
 	{
 		return ConsignmentItem;
 	}
 
 
-	public void setConsignmentItem( String consignmentItem )
+	void setConsignmentItem( String consignmentItem )
 	{
 		ConsignmentItem = consignmentItem;
 	}
 
 
-	public String getActive()
+	String getActive()
 	{
 		return Active;
 	}
 
 
-	public void setActive( String active )
+	void setActive( String active )
 	{
 		Active = active;
 	}
