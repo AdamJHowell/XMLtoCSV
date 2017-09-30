@@ -1,9 +1,14 @@
-import java.io.*;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.jdom2.*;
-import org.jdom2.input.SAXBuilder;
 
 
 public class Main
@@ -88,30 +93,30 @@ public class Main
 		}
 		try
 		{
-			BufferedWriter outputBufferedWriter = new BufferedWriter( new FileWriter( outFileName ) );
-			outputBufferedWriter.write( "WarehouseCode\tWarehouseName\tItemCode\tDescription\tInventoryClass\tProductGroup\tPreferredSupplier\tMaxOnHand\tMinOnHand\tLastPurchaseCostUnit\tLastPurchaseCostTotal\tAverageCostUnit\tAverageCostTotal\tStandardCostUnit\tStandardCostTotal\tCurrency\tConsignmentItem\tActive\n" );
-			for( InventoryObject part : inventoryList )
-			{
-				outputBufferedWriter.write(
-					part.getWarehouseCode() + "\t" +
-						part.getWarehouseName() + "\t" +
-						part.getItemCode() + "\t" +
-						part.getDescription() + "\t" +
-						part.getInventoryClass() + "\t" +
-						part.getProductGroup() + "\t" +
-						part.getPreferredSupplier() + "\t" +
-						part.getMaxOnHand() + "\t" +
-						part.getMinOnHand() + "\t" +
-						part.getLastPurchaseCostUnit() + "\t" +
-						part.getLastPurchaseCostTotal() + "\t" +
-						part.getAverageCostUnit() + "\t" +
-						part.getAverageCostTotal() + "\t" +
-						part.getStandardCostUnit() + "\t" +
-						part.getStandardCostTotal() + "\t" +
-						part.getCurrency() + "\t" +
-						part.getConsignmentItem() + "\t" +
-						part.getActive() +
-						'\n' );
+			try (BufferedWriter outputBufferedWriter = new BufferedWriter(new FileWriter(outFileName))) {
+				outputBufferedWriter.write("WarehouseCode\tWarehouseName\tItemCode\tDescription\tInventoryClass\tProductGroup\tPreferredSupplier\tMaxOnHand\tMinOnHand\tLastPurchaseCostUnit\tLastPurchaseCostTotal\tAverageCostUnit\tAverageCostTotal\tStandardCostUnit\tStandardCostTotal\tCurrency\tConsignmentItem\tActive\n");
+				for (InventoryObject part : inventoryList) {
+					outputBufferedWriter.write(
+							part.getWarehouseCode() + "\t" +
+									part.getWarehouseName() + "\t" +
+									part.getItemCode() + "\t" +
+									part.getDescription() + "\t" +
+									part.getInventoryClass() + "\t" +
+									part.getProductGroup() + "\t" +
+									part.getPreferredSupplier() + "\t" +
+									part.getMaxOnHand() + "\t" +
+									part.getMinOnHand() + "\t" +
+									part.getLastPurchaseCostUnit() + "\t" +
+									part.getLastPurchaseCostTotal() + "\t" +
+									part.getAverageCostUnit() + "\t" +
+									part.getAverageCostTotal() + "\t" +
+									part.getStandardCostUnit() + "\t" +
+									part.getStandardCostTotal() + "\t" +
+									part.getCurrency() + "\t" +
+									part.getConsignmentItem() + "\t" +
+									part.getActive() +
+									'\n');
+				}
 			}
 		}
 		catch( IOException e )
